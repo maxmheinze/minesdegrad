@@ -1,20 +1,21 @@
-pacman::p_load(tidyverse)
-
-secveg <- read_csv("~/research/data/degradation/secondary_veg_coverage_basins.csv")
 
 
-secveg %>%
-  dplyr::filter(bandName == "age_2021") %>%
-  pluck("meanValue") %>%
-  #hist(breaks = 1000)
-  summary()
+# Setup -------------------------------------------------------------------
+
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+source("00_prelims.R")
+
+pacman::p_load(tidyverse,
+               sf)
 
 
-secveg2 <- read_csv("~/research/data/degradation/secondary_veg_age_basins.csv")
+# Read Data ---------------------------------------------------------------
+
+svcov <- read_csv(pd("degradation/secondary_veg_coverage_basins.csv"))
+
+svage <- read_csv(pd("/degradation/secondary_veg_age_basins.csv"))
 
 
-secveg2 %>%
-  dplyr::filter(bandName == "age_2021") %>%
-  pluck("meanValue") %>%
-  #hist(breaks = 1000)
-  summary()
+# Test --------------------------------------------------------------------
+
+

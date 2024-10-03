@@ -1,9 +1,9 @@
 
 message("Setting paths.")
 
-DATA <- "/home/max/github/minesdegrad/data_local/"
-OUT <- "/home/max/github/minesdegrad/output/"
-CODE <- "/home/max/github/minesdegrad/code/"
+DATA <- "/data/"
+OUT <- "/home/max/minesdegrad/output/"
+CODE <- "/home/max/minesdegrad/code/"
 
 
 # Data Path ---------------------------------------------------------------
